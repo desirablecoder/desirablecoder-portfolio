@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import { Star, Play, Pause } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
@@ -7,13 +8,88 @@ import { useState } from "react";
 const testimonials = [
   {
     id: 1,
-    name: "lorem ipsum ",
+    name: "Client form Upwork.com",
     role: "Client",
-    date: "Oct 2024",
+    date: "Apr 2024",
     image: "https://picsum.photos/200/200?random=192",
     content:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ",
+      "Prabhu is not only an excellent coder, but goes way beyond the normal to make sure everything is working perfectly. I've worked with him before and will do so in the future.",
     rating: 5,
+    link: "https://www.upwork.com/freelancers/~015520d9f6cf890eaf",
+  },
+  {
+    id: 2,
+    name: "Client form Upwork.com",
+    role: "Client",
+    date: "Dec 2023",
+    image: "https://picsum.photos/200/200?random=182",
+    content: "Quick learner. Does more than expected from others.",
+    rating: 5,
+    link: "https://www.upwork.com/freelancers/~015520d9f6cf890eaf",
+  },
+  {
+    id: 3,
+    name: "Client form Upwork.com",
+    role: "Client",
+    date: "Dec 2023",
+    image: "https://picsum.photos/200/200?random=172",
+    content: "Prabhu is very knowledgeable and get the work done. Thank you",
+    rating: 5,
+    link: "https://www.upwork.com/freelancers/~015520d9f6cf890eaf",
+  },
+  {
+    id: 4,
+    name: "Client form Upwork.com",
+    role: "Client",
+    date: "Dec 2022",
+    image: "https://picsum.photos/200/200?random=162",
+    content:
+      "Prabhu writes nice clean easy to follow code.  He adheres to the project guidelines and makes suggestions as needed for things that we might not have thought about.  Will definitely hire again.",
+    rating: 5,
+    link: "https://www.upwork.com/freelancers/~015520d9f6cf890eaf",
+  },
+  {
+    id: 5,
+    name: "Client form Upwork.com",
+    role: "Client",
+    date: "Oct 2021",
+    image: "https://picsum.photos/200/200?random=152",
+    content:
+      "Prabhu tries to do what it takes to solve a problem and very receptive to ideas and different approaches to solve it.",
+    rating: 5,
+    link: "https://www.upwork.com/freelancers/~015520d9f6cf890eaf",
+  },
+  {
+    id: 6,
+    name: "Client form Upwork.com",
+    role: "Client",
+    date: "Aug 2020",
+    image: "https://picsum.photos/200/200?random=142",
+    content: "Prabhu is great to work with and completes work very fast. A++",
+    rating: 5,
+    link: "https://www.upwork.com/freelancers/~015520d9f6cf890eaf",
+  },
+  {
+    id: 7,
+    name: "Client form freelancer.com",
+    role: "Client",
+    date: "",
+    image: "https://picsum.photos/200/200?random=132",
+    content:
+      "Very responsive and thorough. Excellent work. Good communication. Will use again.",
+    rating: 5,
+    link: "https://www.freelancer.com/u/desirablecoder",
+  },
+  {
+    id: 8,
+    name: "Client form freelancer.com",
+    role: "Client",
+    date: "",
+    image: "https://picsum.photos/200/200?random=122",
+    content:
+      "Excellent Programmer! HE is very proficient in C# and VB.net as well as hardware interfacing and USB standard, He was able to write a complete DLL for reading my USB hardware in both C# and VB.net I will keep working him on an ongoing basis . A++ programmer.",
+    rating: 5,
+    link: "https://www.freelancer.com/u/desirablecoder",
   },
 ];
 const stats = [
@@ -89,6 +165,14 @@ export default function Testimonials() {
                       <blockquote className="italic text-gray-700 dark:text-gray-300">
                         "{testimonial.content}"
                       </blockquote>
+                      <Button
+                        variant="outline"
+                        className="w-auto cursor-pointer group"
+                        onClick={() => window.open(testimonial.link, "_blank")}
+                      >
+                        Link
+                        <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                      </Button>
                     </div>
                   </div>
                 </CardContent>

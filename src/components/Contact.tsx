@@ -66,10 +66,10 @@ export default function Contact() {
                     <p className="font-medium text-gray-900 dark:text-white">
                       Email
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm font-bold text-gray-600 dark:text-gray-400">
                       desirablecoder@gmail.com
                     </p>
-                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-500">
+                    <p className="mt-1 text-xs text-gray-500 text dark:text-gray-500">
                       Send me an email anytime
                     </p>
                   </div>
